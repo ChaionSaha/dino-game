@@ -12,13 +12,17 @@ document.addEventListener("click", (e) => {
 	dinoJump();
 });
 
+let startingPos = 0;
+
 setInterval(() => {
 	const obstacle = document.createElement("div");
 	obstacle.classList.add("obstacle");
-	obstacle.style.right = `-${random(5, 10)}vw`;
+	startingPos = random(startingPos + 3, 10);
+	obstacle.style.right = `-${startingPos}vw`;
+	console.log(startingPos);
 	const obstacleDiv = document.querySelector(".obstacle-div");
 	obstacleDiv.appendChild(obstacle);
 	setTimeout(function () {
 		obstacleDiv.removeChild(obstacle);
-	}, 3500);
+	}, 4200);
 }, 1500);
