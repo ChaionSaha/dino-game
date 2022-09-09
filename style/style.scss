@@ -31,6 +31,17 @@ body {
 		width: 30px;
 		background-color: aquamarine;
 	}
+
+	& .obstacle {
+		position: absolute;
+		right: -5vw;
+		bottom: 0;
+		height: 30px;
+		width: 30px;
+		border: 1px solid black;
+		background-color: rosybrown;
+		animation: ob 3500ms linear infinite;
+	}
 }
 
 .jump {
@@ -46,5 +57,14 @@ body {
 	}
 	100% {
 		bottom: 0;
+	}
+}
+
+@keyframes ob {
+	0% {
+	}
+
+	100% {
+		right: 85vw;
 	}
 }

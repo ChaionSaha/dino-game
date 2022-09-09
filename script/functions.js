@@ -7,6 +7,6 @@ export function dinoJump() {
 	dino.classList.add("jump");
 	setTimeout(function () {
 		dino.classList.remove("jump");
-	}, 500);
+	}, 450);
 	console.log(random(1, 100));
 }
